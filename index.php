@@ -33,12 +33,12 @@ $sql = 'INSERT INTO public."Product" (
 echo $sql;
 
 $sql2 = "INSERT INTO Product (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('02', 'Me', 'CatX','2019-12-20',11,'abc')";
-/*
+
 $sql3 = 'INSERT INTO public."Product" (
 "Date", "Id", "Product_Name", "Catergory", "Descriptions", "Price") VALUES ('."
 '2019-12-23'::date, '123456'::character varying(20), 'YEET'::character varying(100), 'REEEEEE'::character varying(40), 'dmccloz'::character varying(200), '12'::integer)".
  'returning "Id"';
-echo $sql3;*/
+echo $sql3;
 
 $result = pg_query($link, $sql);
 echo $result;
