@@ -36,11 +36,11 @@ echo $sql1;*/
 /*$sql2 = "INSERT INTO Product (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('02', 'Me', 'CatX','2019-12-20',11,'abc')";*/
 
 $sql3 = 'INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('."
-'$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40), '$date'::date,'$price'::integer, '$description'::character varying(200))".
-   'returning "Id"';
-echo $sql3;
+'$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40), '$date'::date, '$price'::character varying(200), '$description'::integer)".
+ 'returning "Id"';
+echo $sql3;*/
 
-$result = pg_query($link, $sql3);
+$result = pg_query($link, $sql1);
 echo $result;
 
 if($result){
