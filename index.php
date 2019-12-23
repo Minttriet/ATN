@@ -37,9 +37,9 @@ echo $sql1;*/
 
 
 
-$sql3 = INSERT INTO public."Product" ("Id", "Product_Name", "Catergory", "Date", "Price", "Descriptions") VALUES ('."
+$sql3 = 'INSERT INTO public."Product" ("Id", "Product_Name", "Catergory", "Date", "Price", "Descriptions") VALUES ('."
 '$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40), '$date'::date, '$price'::character varying(200), '$description'::integer)".
- 'returning "Id";
+ 'returning "Id"';
 echo $sql3;
 
 $result = pg_query($link, $sql3);
