@@ -27,32 +27,19 @@ $date = pg_escape_string ($link, $_REQUEST['date']);
 $price = pg_escape_string ($link, $_REQUEST['price']);
 $description = pg_escape_string ($link, $_REQUEST['desc']);
 
-echo $id;
-echo "";
-echo $name;
-echo "";
-echo $cat;
-echo "";
-echo $date;
-echo "";
-echo $price;
-echo "";
-echo $desc;
-echo "";
-
 // Attempt insert query execution
-$sql = "INSERT INTO Product (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('$id', '$name', '$cat','$date','$price','abc')";
+$sql = 'INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('$id', '$name', '$cat','$date','$price','abc')";
 echo $sql;
 
 $sql2 = "INSERT INTO Product (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('02', 'Me', 'CatX','2019-12-20',11,'abc')";
 
-$sql3 = 'INSERT INTO public."Product" (
+/*$sql3 = 'INSERT INTO public."Product" (
 "Date", "Id", "Product_Name", "Catergory", "Descriptions", "Price") VALUES ('."
 '2019-12-23'::date, '123'::character varying(20), 'DCM'::character varying(100), 'VCL'::character varying(40), 'REEEEE'::character varying(200), '55'::integer)".
  'returning "Id"';
-echo $sql3;
+echo $sql3;*/
 
-$result = pg_query($link, $sql3);
+$result = pg_query($link, $sql);
 echo $result;
 
 if($result){
