@@ -29,7 +29,7 @@ $description = pg_escape_string ($link, $_REQUEST['desc']);
 
 // Attempt insert query execution
 $sql = 'INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('."
-  '$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40),'$id'::date, '$description'::character varying(200), '$price'::integer)".
+  '$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40),'$id'::date, '$price'::integer, '$description'::character varying(200))".
  'returning "Id"';
 echo $sql;
 
