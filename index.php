@@ -28,7 +28,7 @@ $price = pg_escape_string ($link, $_REQUEST['price']);
 $description = pg_escape_string ($link, $_REQUEST['desc']);
 
 // Attempt insert query execution
-$sql = 'INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('.$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40),'$date'::date,'$price'::integer,'$desc'::character varying(200))".'returning "Id"';
+$sql = "INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('.$id'::character varying(20), '$name'::character varying(100), '$cat'::character varying(40),'$date'::date,'$price'::integer,'$desc'::character varying(200))".'returning "Id";
 echo $sql;
 
 /*$sql2 = "INSERT INTO Product (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('02', 'Me', 'CatX','2019-12-20',11,'abc')";*/
