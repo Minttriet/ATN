@@ -40,7 +40,7 @@ $sql3 = 'INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price,
  'returning "Id"';
 echo $sql3;*/
 
-$result = pg_query($link, $sql1);
+$result = pg_query($link, $sql3);
 echo $result;
 
 if($result){
