@@ -28,7 +28,7 @@ $price = pg_escape_string ($link, $_REQUEST['price']);
 $description = pg_escape_string ($link, $_REQUEST['desc']);
 
 // Attempt insert query execution
-$sql = 'INSERT INTO public."Product" (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('$id', '$name', '$cat','$date','$price','abc')";
+$sql = 'INSERT INTO public."Product" ("Date", "Id", "Product_Name", "Catergory", "Descriptions", "Price") VALUES ('$id', '$name', '$cat','$date','$price','abc')";
 echo $sql;
 
 $sql2 = "INSERT INTO Product (Id, Product_Name, Catergory, Date, Price, Descriptions) VALUES ('02', 'Me', 'CatX','2019-12-20',11,'abc')";
